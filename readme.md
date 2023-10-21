@@ -13,7 +13,7 @@ This is a simple stopwatch web application that allows you to measure time accur
 
 ## Demo
 
-[Link to live demo of the stopwatch web application]
+https://bit.ly/stop-watch-demonstration
 
 ## Live Website
 
