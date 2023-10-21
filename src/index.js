@@ -3,26 +3,26 @@ let start = document.getElementById("start-btn");
 let stop = document.getElementById("stop-btn");
 let reset = document.getElementById("reset-btn");
 
-let currentCounterNum = 0;
+let totalSeconds = 0;
 let interval;
 let stopClicked = false;
 //Logic for starting the stop watch
 function startWatch() {
 
   //If counter is already running, hitting start button should not do anything
-  if (currentCounterNum > 0 && !stopClicked) {
+  if (totalSeconds > 0 && !stopClicked) {
     return;
   }
   //If stop watch was paused/stopped, it should start from the same point.
-  if (currentCounterNum > 0 && stopClicked) {
+  if (totalSeconds > 0 && stopClicked) {
     stopClicked = false;
     startWatch();
   }
   //UPPER LIMIT : 99 Days, 59 Hours, 59 Minutes,59 Seconds = 85766799 Seconds
-  if (currentCounterNum >= 0 && currentCounterNum <= 85766799) {
+  if (totalSeconds >= 0 && totalSeconds <= 85766799) {
     interval = setInterval(function () {
-      currentCounterNum++;
-      let newTime = formatTime(currentCounterNum);
+      totalSeconds++;
+      let newTime = formatTime(totalSeconds);
       updateValues(newTime);
     }, 1000);
   } else {
@@ -63,7 +63,7 @@ function stopWatch() {
 //Function to reset the watch.
 function resetWatch() {
   clearInterval(interval);
-  currentCounterNum = 0;
+  totalSeconds = 0;
   let resetTime = formatTime(0);
   updateValues(resetTime);
   return;
