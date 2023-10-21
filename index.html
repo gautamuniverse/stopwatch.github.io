@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c340a00dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Dark mode button -->
+    <button onclick="darkMode()" id="dark-mode">
+      <i class="fa-solid fa-moon fa-2xl" id="dark-mode-icon"></i>
+    </button>
+    <!-- Light mode button -->
+    <button onclick="lightMode()" id="light-mode">
+      <i class="fa-solid fa-sun fa-2xl" id="light-mode-icon"></i>
+    </button>
+    <div class="stopwatch-container">
+      <h1>Stop Watch</h1>
+      <div class="display-container">
+        <!-- Display for seconds -->
+        <div class="display-items" id="seconds">
+          <p class="counter-num">00</p>
+          <p class="time-format">Days</p>
+        </div>
+        <!-- Display for minutes -->
+        <div class="display-items" id="minutes">
+          <p class="counter-num">00</p>
+          <p class="time-format">Hours</p>
+        </div>
+        <!-- Display for hours -->
+        <div class="display-items" id="hours">
+          <p class="counter-num">00</p>
+          <p class="time-format">Minutes</p>
+        </div>
+        <!-- Display for days -->
+        <div class="display-items" id="days">
+          <p class="counter-num">00</p>
+          <p class="time-format">Seconds</p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <!-- Start button -->
+        <button class="buttons" onclick="startWatch()" id="start-btn">
+          Start
+        </button>
+        <!-- Stop button -->
+        <button class="buttons" onclick="stopWatch()" id="stop-btn">
+          Stop
+        </button>
+        <!-- Reset button -->
+        <button class="buttons" onclick="resetWatch()" id="reset-btn">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./src/index.js"></script>
+  </body>
+</html>
